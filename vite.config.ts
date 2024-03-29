@@ -1,9 +1,10 @@
+import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
-export default {
+export default defineConfig({
     resolve: {
         alias: {
-            '@': resolve(__dirname, 'src'),
+            '@': '/src',
         },
     },
     build: {
@@ -14,4 +15,4 @@ export default {
             fileName: 'index',
         },
     },
-};
+});
