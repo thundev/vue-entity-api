@@ -86,7 +86,9 @@ export default abstract class EntityApi<T, D> extends BaseApi implements IList<D
         };
 
         if (this.loadRelations && data.length > 0) {
-            this.getRelations().forEach(parseRelation);
+            for (const relation of this.getRelations()) {
+                await parseRelation(relation);
+            }
         }
 
         return Object.values(updated);

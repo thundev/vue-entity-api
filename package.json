@@ -1,6 +1,6 @@
 {
     "name": "vue-entity-api",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Entity API base classes.",
     "type": "module",
     "main": "dist/index.umd.cjs",
