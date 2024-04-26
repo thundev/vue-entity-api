@@ -15,4 +15,12 @@ export default abstract class CachedEntityApi<T, D> extends EntityApi<T, D> {
 
         return storage.get<ListResponse<D>>(this.url);
     }
+
+    clearCache() {
+        const storage: BrowserStorage = new BrowserStorage(window.localStorage);
+
+        if (storage.has(this.url)) {
+            storage.remove(this.url);
+        }
+    }
 }
